@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.bigger{    
+    transform: scale(1.5);
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.bigger i{
+    color: #312E80;
+}
+
+.title{
+    color: #312E80;
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: block;
+}
+
+.text{
+    margin-top: 0px;
+    color: #312E80;
+    font-weight: 300;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    display: block;
+    max-width: 150px;
+}
+
+.textContainer{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 60px;
+}
+
+.textContainer img{
+    height: 50px;
+}

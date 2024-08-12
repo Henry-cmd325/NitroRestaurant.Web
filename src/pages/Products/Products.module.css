@@ -1,0 +1,55 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.inputIcon > input[type="text"]{
+    margin-top: 10px;
+    background-color: #F5F7FA;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+    width: 540px;
+    height: 35px;
+    outline: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    padding-left: 40px;
+    font-size: 20px;
+    color: #6D747E;
+}
+
+.inputIcon {
+    position: relative;
+    display: inline-block;
+}
+
+
+.inputIcon > i {
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Esto hace que el icono no interfiera con los clics en el input */
+    color: #6D747E; /* Puedes cambiar el color del icono aquí */
+    line-height: 35px;
+    align-items: center;
+}
+
+.container > label{
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-weight: 300;
+}
+
+.container > select{
+    margin-top: 10px;
+    background-color: #F5F7FA;
+    border: 2px solid #d9d9d9;
+    width: 260px;
+    height: 35px;
+    outline: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    outline: none;
+    font-size: 20px;
+    color: #6D747E;
+}

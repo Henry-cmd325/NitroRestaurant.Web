@@ -1,0 +1,14 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.statistics{
+    display: flex;
+    justify-content: space-around;
+    background-color: #C7D2FF;
+    border-radius: 25px;
+    margin-top: 20px;
+    height: 100px;
+    padding: 0px;
+}

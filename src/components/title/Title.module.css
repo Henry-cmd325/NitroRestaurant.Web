@@ -1,0 +1,17 @@
+.div{
+    display: flex;
+    background-color: #312D81;
+    border-radius: 10px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
