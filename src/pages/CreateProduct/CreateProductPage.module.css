@@ -138,3 +138,7 @@
     font-weight: bold;
     margin-top: 10px;
 }
+
+.fileInput {
+    background-color: transparent !important;
+}

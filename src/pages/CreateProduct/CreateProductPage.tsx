@@ -4,7 +4,7 @@ import { NavBar } from "../../components/navbar/NavBar";
 import { Title } from "../../components/title/Title";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { createProductAsync, editProductAsync } from "../../services";
+import { createProductAsync, editProductAsync, uploadImage } from "../../services";
 import { getBranchesAsync } from "../../services/branchesService";
 import { IBranch, IProductRequest, IName, IProductViewModel } from "../../models";
 import { getUms } from "../../services/umService";
@@ -37,6 +37,15 @@ export default function CreateProductPage(){
     const [branches, setBranches] = useState<IBranch[]>()
     const [ums, setUms] = useState<IName[]>()
     const [categories, setCategories] = useState<IName[]>()
+    const [url, setUrl] = useState<string>("")
+
+    const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (event.target.files && event.target.files[0]) {
+            const newUrl = await uploadImage(event.target.files[0])
+            setUrl(newUrl)
+        }
+    }
+    
 
     const formRef = useRef<HTMLFormElement>(null)
 
@@ -82,7 +91,7 @@ export default function CreateProductPage(){
                     id_sucursal: product.id_sucursal,
                     id_categoria: product.id_categoria,
                     id_um: product.id_um,
-                    imagen: product.imagen,
+                    imagen: url,
                     inversion: Number(product.inversion),
                     nombre: product.nombre,
                     precio: Number(product.precio),
@@ -110,13 +119,17 @@ export default function CreateProductPage(){
                 return
             }
 
+            if (!url) {
+                alert("Espere un momento mientras se sube la imagen")
+                return
+            }
             const request: IProductRequest = {
                 cantidad: product.cantidad,
                 contable: product.contable,
                 id_sucursal: product.id_sucursal,
                 id_categoria: product.id_categoria,
                 id_um: product.id_um,
-                imagen: product.imagen,
+                imagen: url,
                 inversion: Number(product.inversion),
                 nombre: product.nombre,
                 precio: Number(product.precio),
@@ -128,7 +141,6 @@ export default function CreateProductPage(){
                     }
                 }
             }
-
             
             const response = await createProductAsync(request)
             
@@ -262,9 +274,13 @@ export default function CreateProductPage(){
                                 />
                             </div>
 
-                            <div className={styles.formItemInvisible}>
-                                <label>Calorias:</label>
-                                <input/>
+                            <div className={styles.formItem}>
+                                <label>Imagen:</label>
+                                <input
+                                    type="file" 
+                                    onChange={handleFileChange}
+                                    className={styles.fileInput}
+                                />
                             </div>
                         </div>
                     </form>
