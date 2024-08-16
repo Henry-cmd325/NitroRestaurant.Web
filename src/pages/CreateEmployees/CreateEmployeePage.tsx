@@ -16,7 +16,7 @@ const initialEmployee: IEmployeeViewModel = {
     email: "",
     password: "",
     password2: "",
-    rol: "empleado",
+    rol: "",
     id_sucursal: "",
     photoURL: "https://media.istockphoto.com/id/544353640/es/foto/negocios-peque%C3%B1a.jpg?s=2048x2048&w=is&k=20&c=LNq_MPXS3jtHcbhed8ADFPf98lZyOSgZXG6HXq-3P90="
 }
@@ -155,7 +155,23 @@ export default function CreateEmployeePage(){
                                     value={employee.email}
                                     onChange={handleChange}
                                 />
-                            </div>   
+                            </div> 
+
+                            <div className={styles.formItem}>
+                                <label>Rol:</label>
+                                <select
+                                    name="rol"
+                                    value={employee.rol}
+                                    onChange={handleChange}
+                                >
+                                    <option>Selecciona un rol</option>
+                                    <option value="admin">Administrador</option>
+                                    <option value="empleado">Empleado</option>
+                                    <option value="mesero">Mesero</option>
+                                    <option value="cocinero">Cocinero</option>
+                                    <option value="cajero">Cajero</option>
+                                </select>
+                            </div>  
                         </div>
                         <div className={styles.divider}></div>
                         <div className={styles.column}>
@@ -220,6 +236,18 @@ export default function CreateEmployeePage(){
                                 )}
                                 
                             </div>
+
+                            <div className={styles.formItemInvisible}>
+                                <label>Rol:</label>
+                                <select>
+                                    <option>Selecciona un rol</option>
+                                    <option>Administrador</option>
+                                    <option>Empleado</option>
+                                    <option>Mesero</option>
+                                    <option>Cocinero</option>
+                                    <option>Cajero</option>
+                                </select>
+                            </div> 
 
                         </div>
                     </form>

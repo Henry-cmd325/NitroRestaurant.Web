@@ -84,9 +84,9 @@ export const EmployeesTable: React.FC<props> = ({ isLoading, refreshEmployees, e
                                         <span className={styles.email}>{e.email}</span>
                                     </div>
                                 </td>
-                                <td>{e.rol === "admin"? 
-                                        <span>Administrador</span>:
-                                        <span>Empleado</span>}
+                                <td>{e.rol === "admin" ? 
+                                    (<span>Administrador</span>) :
+                                    (<span>{e.rol.charAt(0).toUpperCase() + e.rol.slice(1)}</span>)}
                                 </td>
                                 <td>{e.nombreSucursal}</td>
                             </tr>
