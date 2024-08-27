@@ -25,6 +25,5 @@ export const DialogContainer: React.FC<props> = ({ editFunction, deleteFunction,
                 </div>
             </div>
         </div>
-        
     )
 }

@@ -15,8 +15,10 @@ export const NavBar: React.FC<MyComponentProps> = ({ children }) => {
             return styles.navlink
         if (path === "/employees" && location.pathname === "/create-employee")
             return styles.navlink
+        if (path === "/providers" && location.pathname === "/create-provider")
+            return styles.navlink
         
-        return location.pathname === path? styles.navlink: '';
+        return location.pathname === path ? styles.navlink : '';
     }
 
     return (
@@ -42,6 +44,20 @@ export const NavBar: React.FC<MyComponentProps> = ({ children }) => {
                         <Link to="/employees">
                             <i className="fa-regular fa-address-book"></i>
                             <span>Empleados</span>
+                        </Link>
+                        <hr/>
+                    </li>
+                    <li className={getLinkClass("/providers")}>
+                        <Link to="/providers">
+                            <i className="fa-solid fa-truck-field"></i>
+                            <span>Proveedores</span>
+                        </Link>
+                        <hr/>
+                    </li>
+                    <li className={getLinkClass("/warehouse")}>
+                        <Link to="/warehouse">
+                            <i className="fa-solid fa-boxes-stacked"></i>
+                            <span>Almacén</span>
                         </Link>
                         <hr/>
                     </li>

@@ -20,7 +20,11 @@
     width: 20vw;
 }
 
-.rolColumn{
+.typeColumn{
+    width: 10vw;
+}
+
+.quantityColumn{
     width: 10vw;
 }
 
@@ -44,6 +48,7 @@
     color: #312D81;
     height: 64px;
     line-height: 64px;
+    transform: rotate(45deg);
 }
 
 .tr{
@@ -107,6 +112,14 @@
     flex-direction: column;
 }
 
-.email{
+.provider{
     color: #6D747E
+}
+
+.colorGreen{
+    color: #00A65B;
+}
+
+.colorRed{
+    color: #DE1313;
 }

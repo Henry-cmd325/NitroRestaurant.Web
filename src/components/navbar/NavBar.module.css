@@ -20,8 +20,8 @@
   }
   
   .sidebar h2 {
-    margin-top: 10px;
-    font-size: 28px;
+    margin-top: 5px;
+    font-size: 30px;
     font-weight: bold;
   }
   
@@ -31,9 +31,9 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    height: 50%;
+    height: 78%;
   }
   
   .sidebar ul li {
@@ -57,7 +57,37 @@
   .sidebar ul li a span{
     margin-left: 10px;
   }
+
+  li hr{
+    width: 100%;
+    border: 1px solid #fff;
+    animation: none;
+  }
                                                   
   .navlink hr{
-    border: 2.5px solid #fff !important;
+    animation: shrinkAndExpand 300ms ease forwards !important;
   }
+
+  @keyframes shrinkAndExpand {
+    0% {
+        width: 100%;
+        border-width: 2.2px;
+    }
+    50% {
+        width: 0;
+        margin-right: 200px;
+        border-width: 2.2px;
+    }
+    100% {
+        width: 100%;
+        border-width: 2.2px;
+    }
+  }
+
+  /*.navlink span{
+    color: #C7D2FF;
+  }
+
+  .navlink i{
+    color: #C7D2FF;
+  }*/

@@ -17,15 +17,15 @@
 }
 
 .nameColumn{
-    width: 20vw;
-}
-
-.rolColumn{
     width: 10vw;
 }
 
-.branchColumn{
+.telefonoColumn{
     width: 10vw;
+}
+
+.direccionColumn{
+    width: 30vw;
 }
 
 .table th{
@@ -102,11 +102,8 @@
     height: 180px;
 }
 
-.nameContainer{
+.telefonoContainer{
     display: flex;
     flex-direction: column;
-}
-
-.email{
-    color: #6D747E
+    color: #6D747E;
 }

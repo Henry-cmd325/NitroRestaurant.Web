@@ -7,6 +7,9 @@ import ProductsPage from './pages/Products/ProductsPage'
 import EmployeePage from './pages/Employees/EmployeePage'
 import CreateEmployeePage from './pages/CreateEmployees/CreateEmployeePage'
 import CreateProductPage from './pages/CreateProduct/CreateProductPage'
+import ProvidersPage from './pages/ProvidersP/ProvidersPage'
+import WareHousePage from './pages/WareHouse/WareHousePage'
+import CreateProviderPage from './pages/CreateProvider/CreateProviderPage'
 
 function App() {
   return (
@@ -41,6 +44,21 @@ function App() {
           <Route path="/create-product" element={
             <ProtectedRoute>
               <CreateProductPage/>
+            </ProtectedRoute>
+          }/>
+          <Route path="/providers" element={
+            <ProtectedRoute>
+              <ProvidersPage/>
+            </ProtectedRoute>
+          }/>
+          <Route path="/create-provider" element={
+            <ProtectedRoute>
+              <CreateProviderPage/>
+            </ProtectedRoute>
+          }/>
+          <Route path="/warehouse" element={
+            <ProtectedRoute>
+              <WareHousePage/>
             </ProtectedRoute>
           }/>
 
