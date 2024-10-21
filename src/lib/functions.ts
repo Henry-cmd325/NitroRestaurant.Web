@@ -1,1 +1,0 @@
-export const baseUrl = "http://127.0.0.1:5001/nitro-restaurant/us-central1/api"
